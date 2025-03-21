@@ -31,3 +31,5 @@ jobs:
           tags: |
             eliasassuncao100/app:latest
             eliasassuncao100/app:v${{ env.VERSION }}
+            context: .
+          file: ./src/Dockerfile  
