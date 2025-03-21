@@ -32,5 +32,5 @@ jobs:
           push: true
           tags: |
             eliasassuncao100/fake-shop:latest
-            eliasassuncao100/fake-shop:v${{ env.VERSION }}
+            eliasassuncao100/fake-shop:v${{ github.run_number }}
             
