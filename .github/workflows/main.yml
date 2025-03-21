@@ -34,3 +34,22 @@ jobs:
             eliasassuncao100/fake-shop:latest
             eliasassuncao100/fake-shop:v${{ github.run_number }}
             
+  Deploy:
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        
+      - uses: azure/k8s-set-context@v4
+        with:
+           method: kubeconfig
+           kubeconfig: ${{ secrets.KUBE_CONFIG }}
+
+      - uses: Azure/k8s-deploy@v5
+        with:
+          manifests: |
+              ./K8s/deployment.yaml
+          images: eliasassuncao100/fake-shop:latest
+           
