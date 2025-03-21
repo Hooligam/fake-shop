@@ -28,5 +28,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: eliasassuncao100/app:latest
-                eliasassuncao100/app:v2
+          tags: |
+            eliasassuncao100/app:latest
+            eliasassuncao100/app:v${{ env.VERSION }}
