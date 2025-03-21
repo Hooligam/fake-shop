@@ -31,6 +31,6 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            eliasassuncao100/app:latest
-            eliasassuncao100/app:v${{ env.VERSION }}
+            eliasassuncao100/fake-shop:latest
+            eliasassuncao100/fake-shop:v${{ env.VERSION }}
             
