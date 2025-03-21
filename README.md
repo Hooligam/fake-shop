@@ -17,3 +17,5 @@ DB_PORT	=>	Porta de conexão com o banco de dados PostgreSQL.
 https://hub.docker.com/repository/docker/eliasassuncao100/fake-shop/general
 
 ## Arquivo de manifesto dentro da pasta K8s
+
+## Action criados, basta realizar um commit que nossa automação comeca a rodar
